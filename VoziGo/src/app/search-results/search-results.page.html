@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Available Rides</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="filteredRides.length > 0">
+    <ion-item *ngFor="let ride of filteredRides">
+      <ion-label>
+        <h2>{{ ride.from }} to {{ ride.to }}</h2>
+        <p>Driver: {{ ride.driver }}</p>
+        <p>Price: {{ ride.price }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-item *ngIf="filteredRides.length === 0">
+    <ion-label>No rides available for selected cities.</ion-label>
+  </ion-item>
+</ion-content>

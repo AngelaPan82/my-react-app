@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Select Cities</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <!-- From Select -->
+    <ion-item>
+      <ion-label>From</ion-label>
+      <ion-select [(ngModel)]="fromCity" placeholder="Select city">
+        <ion-select-option value="Skopje">Skopje</ion-select-option>
+        <ion-select-option value="Veles">Veles</ion-select-option>
+        <ion-select-option value="Kavadarci">Kavadarci</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- To Select -->
+    <ion-item>
+      <ion-label>To</ion-label>
+      <ion-select [(ngModel)]="toCity" placeholder="Select city">
+        <ion-select-option value="Skopje">Skopje</ion-select-option>
+        <ion-select-option value="Veles">Veles</ion-select-option>
+        <ion-select-option value="Kavadarci">Kavadarci</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- Search Button -->
+    <ion-button expand="block" (click)="searchRides()">
+      Search
+    </ion-button>
+  </div>
+</ion-content>
+
